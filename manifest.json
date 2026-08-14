@@ -1,0 +1,50 @@
+{
+  "name": "全球一人公司创业全链路指导系统",
+  "slug": "global-entrepreneurship",
+  "version": "1.0.3",
+  "category": "商业与创业",
+  "platforms": ["Claude Code", "OpenClaw", "Codex CLI", "ChatGPT", "DeepSeek", "Gemini", "Kimi", "Coze", "SkillHub"],
+  "tags": ["entrepreneurship", "business", "startup", "solo-founder", "global", "multilingual", "all-countries", "freelancer"],
+  "description": "覆盖全球所有国家/地区的15层一人公司创业闭环——从用户画像到长期蓝图。自动语言适配，六大经济区数据，各国行业分类与合规要求。",
+  "entry_points": [
+    "全链路规划",
+    "国家/地区定向",
+    "行业定向",
+    "单层服务",
+    "每日运营",
+    "新手引导"
+  ],
+  "scripts": [
+    {
+      "file": "financial_calculator.py",
+      "type": "Python",
+      "purpose": "财务模型计算（一次性购买/订阅制/AI成本对比）",
+      "usage": "python scripts/financial_calculator.py --model one-time --fixed-costs 500 --variable-costs 20 --price 99 --conservative 30 --moderate 80 --optimistic 200"
+    },
+    {
+      "file": "state.mjs",
+      "type": "Node.js",
+      "purpose": "项目状态管理（跨平台Node.js）",
+      "usage": "node scripts/state.mjs init"
+    },
+    {
+      "file": "deploy.mjs",
+      "type": "Node.js",
+      "purpose": "多AI Host部署入口生成（跨平台Node.js）",
+      "usage": "node scripts/deploy.mjs --target all"
+    },
+    {
+      "file": "knowledge-filter.mjs",
+      "type": "Node.js",
+      "purpose": "知识库精准加载过滤",
+      "usage": "node scripts/knowledge-filter.mjs --entry market --json"
+    }
+  ],
+  "agents": [
+    { "name": "market-analyst", "role": "全球市场扫描与机会评估", "model_preference": "强推理" },
+    { "name": "financial-planner", "role": "财务建模与利润分析", "model_preference": "强推理" },
+    { "name": "compliance-advisor", "role": "合规检查与风险管控", "model_preference": "快速" },
+    { "name": "content-strategist", "role": "内容获客与增长引擎设计", "model_preference": "强文笔" }
+  ],
+  "references_count": 16
+}
